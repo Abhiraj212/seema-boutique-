@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>You're offline — SR Fashion</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('sr-fashion-theme');
+        var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
+  <style>
+    body { display: grid; place-items: center; min-height: 100svh; text-align: center; }
+    .offline-box { max-width: 420px; padding: var(--space-l); }
+  </style>
+</head>
+<body>
+  <div class="offline-box">
+    <span class="brand-mark" style="width:56px;height:56px;font-size:1rem;margin-inline:auto;">SR</span>
+    <h1 style="margin-top: var(--space-m);">You're offline</h1>
+    <p class="lede mx-auto" style="margin-top: var(--space-s);">
+      It looks like there's no connection right now. Pages you've already
+      visited may still work — reconnect and refresh to pick up where you left off.
+    </p>
+    <a href="index.html" class="btn btn--primary" style="margin-top: var(--space-l);">Try again</a>
+  </div>
+</body>
+</html>

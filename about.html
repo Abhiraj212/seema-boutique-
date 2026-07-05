@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>About Us — SR Fashion</title>
+  <meta name="description" content="Three generations of master tailors. Learn the story behind SR Fashion's bespoke suit workshop." />
+  <meta name="theme-color" content="#ede7da" />
+  <link rel="canonical" href="https://www.srfashion.example/about.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="SR Fashion" />
+  <meta property="og:title" content="About SR Fashion — Our Tailoring Story" />
+  <meta property="og:description" content="Three generations of pattern-making, one family workshop." />
+  <meta property="og:image" content="assets/images/og-cover.jpg" />
+
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/icons/icon-192.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png" />
+  <link rel="manifest" href="manifest.json" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('sr-fashion-theme');
+        var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <div class="page-veil" aria-hidden="true"></div>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a href="index.html" class="brand">
+        <span class="brand-mark" aria-hidden="true">SR</span>
+        <span class="brand-full">SR Fashion<small>Bespoke Tailoring</small></span>
+      </a>
+      <button class="nav-burger" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle menu"><span></span></button>
+      <div class="nav-scrim"></div>
+      <ul class="nav-links" id="primary-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="catalog.html">Catalog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html" class="btn btn--primary">Book Fitting</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn--ghost">Login</a>
+        <a href="register.html" class="btn btn--primary">Book Fitting</a>
+        <button class="theme-toggle" aria-label="Toggle dark mode">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v3M12 18.5v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2.5 12h3M18.5 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div class="page-header container">
+      <p class="eyebrow mx-auto" style="justify-content:center;">Our story</p>
+      <h1>Stitched together over three generations</h1>
+      <p class="lede mx-auto">SR Fashion began as a single cutting table in 1998 and grew into a workshop trusted for suits that fit right the first time.</p>
+    </div>
+
+    <section class="section container">
+      <div class="hero-grid">
+        <div class="hero-figure reveal">
+          <span class="eyebrow" style="position:relative;">Workshop, Est. 2012</span>
+        </div>
+        <div class="reveal stack">
+          <p class="eyebrow">How it started</p>
+          <h2>A tailor's table, a spool of thread, and a promise</h2>
+          <p>Our founder, Ramesh Sharma, learned pattern-cutting from his father in a one-room shop before opening SR Fashion's first storefront in 2012. The rule he set then still holds: nothing leaves the workshop until it fits properly.</p>
+          <p>Today the same principle guides every commission — a private consultation, a hand-drafted pattern, and multiple fittings before a single stitch is finished for good.</p>
+        </div>
+      </div>
+    </section>
+
+    <svg class="stitch-divider container" viewBox="0 0 1200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M0 10 H1200" /></svg>
+
+    <section class="section container">
+      <div class="page-header" style="padding-block:0 var(--space-l);">
+        <p class="eyebrow mx-auto" style="justify-content:center;">What guides us</p>
+        <h2>Our values</h2>
+      </div>
+      <div class="grid stagger" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
+        <div class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12l6 6L20 6"/></svg></div>
+          <h3>Fit first</h3>
+          <p>Every pattern is drafted from your own measurements — never adjusted from a standard block.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 3 7v6c0 5 4 9 9 9s9-4 9-9V7z"/></svg></div>
+          <h3>Honest materials</h3>
+          <p>We source cloth directly from mills we've worked with for years and disclose fibre content plainly.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+          <h3>Time, not shortcuts</h3>
+          <p>Hand-padded lapels and hand-set sleeves take longer — we build that time into every timeline we quote.</p>
+        </div>
+      </div>
+    </section>
+
+    <svg class="stitch-divider container" viewBox="0 0 1200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M0 10 H1200" /></svg>
+
+    <section class="section container">
+      <div class="page-header" style="padding-block:0 var(--space-l);">
+        <p class="eyebrow mx-auto" style="justify-content:center;">The people behind the pattern</p>
+        <h2>Meet the workshop</h2>
+      </div>
+      <div class="grid stagger" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+        <div class="card text-center">
+          <div class="card-icon mx-auto" style="width:64px;height:64px;border-radius:50%;">RS</div>
+          <h4>Ramesh Sharma</h4>
+          <p class="lede">Founder &amp; Master Cutter</p>
+        </div>
+        <div class="card text-center">
+          <div class="card-icon mx-auto" style="width:64px;height:64px;border-radius:50%;">AS</div>
+          <h4>Anjali Sharma</h4>
+          <p class="lede">Head of Bridal &amp; Ceremonial Wear</p>
+        </div>
+        <div class="card text-center">
+          <div class="card-icon mx-auto" style="width:64px;height:64px;border-radius:50%;">VK</div>
+          <h4>Vikram Kulkarni</h4>
+          <p class="lede">Senior Tailor, 18 years</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="card text-center" style="padding: var(--space-2xl);">
+        <h2>Come see the workshop in person</h2>
+        <p class="lede mx-auto" style="margin-top:var(--space-s);">Book a fitting consultation and meet the hands that will make your suit.</p>
+        <div class="cluster" style="justify-content:center; margin-top: var(--space-l);">
+          <a href="register.html" class="btn btn--primary btn--large">Book a fitting</a>
+          <a href="contact.html" class="btn btn--ghost btn--large">Get directions</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand">
+            <span class="brand-mark" aria-hidden="true">SR</span>
+            <span class="brand-full">SR Fashion<small>Bespoke Tailoring</small></span>
+          </a>
+          <p style="margin-top: var(--space-s); color: var(--text-muted); font-size: var(--step--1);">Hand-cut suits and formal wear, made to your measurements.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="catalog.html">Catalog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Account</h4>
+          <ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Visit the workshop</h4>
+          <address style="font-style:normal; font-size: var(--step--1); color: var(--text-muted);">
+            12 Tailor's Lane, Fashion Street<br />
+            Mumbai, Maharashtra 400001
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-year></span> SR Fashion. All rights reserved.</span>
+        <span>Crafted with thread &amp; code.</span>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="whatsapp-fab" aria-label="Chat with us on WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.02 3C9.4 3 4 8.4 4 15.02c0 2.24.62 4.34 1.7 6.14L4 29l8.02-1.66a12.9 12.9 0 0 0 4 .64c6.62 0 12.02-5.4 12.02-12.02C28.04 8.4 22.64 3 16.02 3zm0 21.8c-1.9 0-3.7-.5-5.28-1.44l-.38-.22-4.76 1 1-4.64-.24-.38a10.7 10.7 0 0 1-1.66-5.7c0-5.9 4.8-10.7 10.7-10.7 5.9 0 10.7 4.8 10.7 10.7s-4.8 10.7-10.7 10.7z"/><path d="M22 18.4c-.32-.16-1.9-.94-2.2-1.04-.3-.1-.5-.16-.72.16-.22.32-.84 1.04-1.02 1.24-.2.2-.38.24-.7.08-.32-.16-1.34-.5-2.56-1.6-.94-.84-1.58-1.88-1.76-2.2-.18-.32-.02-.5.14-.66.14-.14.32-.38.48-.56.16-.2.2-.32.32-.54.1-.2.05-.4-.03-.56-.08-.16-.72-1.72-.98-2.36-.26-.62-.52-.54-.72-.54-.18 0-.4-.02-.6-.02-.2 0-.56.08-.86.4-.3.32-1.12 1.1-1.12 2.66 0 1.56 1.14 3.08 1.3 3.3.16.2 2.24 3.42 5.44 4.8.76.32 1.36.52 1.82.68.76.24 1.46.2 2 .12.62-.1 1.9-.78 2.16-1.52.28-.76.28-1.4.2-1.52-.08-.14-.3-.22-.62-.36z"/></svg>
+  </a>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="assets/js/firebase-config.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/nav.js"></script>
+  <script src="assets/js/whatsapp.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

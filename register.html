@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Register — SR Fashion</title>
+  <meta name="description" content="Create an SR Fashion account to book fittings and track your custom suit orders." />
+  <meta name="theme-color" content="#ede7da" />
+  <meta name="robots" content="noindex" />
+  <link rel="canonical" href="https://www.srfashion.example/register.html" />
+
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/icons/icon-192.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png" />
+  <link rel="manifest" href="manifest.json" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('sr-fashion-theme');
+        var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <div class="page-veil" aria-hidden="true"></div>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a href="index.html" class="brand">
+        <span class="brand-mark" aria-hidden="true">SR</span>
+        <span class="brand-full">SR Fashion<small>Bespoke Tailoring</small></span>
+      </a>
+      <button class="nav-burger" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle menu"><span></span></button>
+      <div class="nav-scrim"></div>
+      <ul class="nav-links" id="primary-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="catalog.html">Catalog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html" class="btn btn--primary">Book Fitting</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn--ghost">Login</a>
+        <a href="register.html" class="btn btn--primary">Book Fitting</a>
+        <button class="theme-toggle" aria-label="Toggle dark mode">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v3M12 18.5v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2.5 12h3M18.5 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="section container">
+      <div class="form-card reveal">
+        <div class="text-center" style="margin-bottom: var(--space-l);">
+          <span class="brand-mark" style="width:52px;height:52px;font-size:1rem;margin-inline:auto;">SR</span>
+          <h2 style="margin-top: var(--space-s);">Create your account</h2>
+          <p class="lede">Book fittings and keep track of your orders in one place.</p>
+        </div>
+
+        <form id="register-form" novalidate>
+          <div class="form-error" role="alert"></div>
+          <div class="form-success" role="status"></div>
+
+          <div class="field">
+            <label for="register-name">Full name</label>
+            <input class="input" type="text" id="register-name" name="name" placeholder="Your name" required autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="register-email">Email</label>
+            <input class="input" type="email" id="register-email" name="email" placeholder="you@example.com" required autocomplete="email" />
+          </div>
+          <div class="field">
+            <label for="register-password">Password</label>
+            <input class="input" type="password" id="register-password" name="password" placeholder="At least 6 characters" required autocomplete="new-password" />
+          </div>
+          <div class="field">
+            <label for="register-confirm">Confirm password</label>
+            <input class="input" type="password" id="register-confirm" name="confirmPassword" placeholder="Re-enter password" required autocomplete="new-password" />
+          </div>
+          <div class="field">
+            <label class="checkbox-row">
+              <input type="checkbox" name="terms" required />
+              I agree to the Terms of Service and Privacy Policy
+            </label>
+          </div>
+          <button type="submit" class="btn btn--primary btn--block btn--large">Create account</button>
+        </form>
+
+        <p class="form-foot">Already have an account? <a href="login.html">Sign in</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top:none; margin-top:0; padding-top:0;">
+        <span>&copy; <span data-year></span> SR Fashion. All rights reserved.</span>
+        <span><a href="index.html" style="color:inherit; text-decoration:none;">Back to home</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="whatsapp-fab" aria-label="Chat with us on WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.02 3C9.4 3 4 8.4 4 15.02c0 2.24.62 4.34 1.7 6.14L4 29l8.02-1.66a12.9 12.9 0 0 0 4 .64c6.62 0 12.02-5.4 12.02-12.02C28.04 8.4 22.64 3 16.02 3zm0 21.8c-1.9 0-3.7-.5-5.28-1.44l-.38-.22-4.76 1 1-4.64-.24-.38a10.7 10.7 0 0 1-1.66-5.7c0-5.9 4.8-10.7 10.7-10.7 5.9 0 10.7 4.8 10.7 10.7s-4.8 10.7-10.7 10.7z"/><path d="M22 18.4c-.32-.16-1.9-.94-2.2-1.04-.3-.1-.5-.16-.72.16-.22.32-.84 1.04-1.02 1.24-.2.2-.38.24-.7.08-.32-.16-1.34-.5-2.56-1.6-.94-.84-1.58-1.88-1.76-2.2-.18-.32-.02-.5.14-.66.14-.14.32-.38.48-.56.16-.2.2-.32.32-.54.1-.2.05-.4-.03-.56-.08-.16-.72-1.72-.98-2.36-.26-.62-.52-.54-.72-.54-.18 0-.4-.02-.6-.02-.2 0-.56.08-.86.4-.3.32-1.12 1.1-1.12 2.66 0 1.56 1.14 3.08 1.3 3.3.16.2 2.24 3.42 5.44 4.8.76.32 1.36.52 1.82.68.76.24 1.46.2 2 .12.62-.1 1.9-.78 2.16-1.52.28-.76.28-1.4.2-1.52-.08-.14-.3-.22-.62-.36z"/></svg>
+  </a>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="assets/js/firebase-config.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/nav.js"></script>
+  <script src="assets/js/whatsapp.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/auth.js"></script>
+</body>
+</html>
