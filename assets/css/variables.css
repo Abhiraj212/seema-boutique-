@@ -1,0 +1,103 @@
+/* ==========================================================================
+   SR Fashion — Design Tokens
+   Palette inspired by the tailor's workbench: navy worsted wool, brass
+   buttons, burgundy basting thread, and bone-white shirting cotton.
+   ========================================================================== */
+
+:root {
+  /* ---- Brand palette (theme-independent) ---- */
+  --brass: #b8923f;
+  --brass-bright: #d8b56a;
+  --burgundy: #7e2a36;
+  --burgundy-bright: #9c3a47;
+
+  /* ---- Type scale ---- */
+  --font-display: 'Fraunces', 'Iowan Old Style', Georgia, serif;
+  --font-body: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+
+  --step--1: clamp(0.8rem, 0.78rem + 0.1vw, 0.875rem);
+  --step-0: clamp(1rem, 0.97rem + 0.15vw, 1.125rem);
+  --step-1: clamp(1.25rem, 1.18rem + 0.35vw, 1.5rem);
+  --step-2: clamp(1.6rem, 1.45rem + 0.75vw, 2.1rem);
+  --step-3: clamp(2.1rem, 1.8rem + 1.5vw, 3rem);
+  --step-4: clamp(2.75rem, 2.2rem + 2.75vw, 4.5rem);
+
+  /* ---- Spacing ---- */
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-s: 1rem;
+  --space-m: 1.5rem;
+  --space-l: 2.25rem;
+  --space-xl: 3.5rem;
+  --space-2xl: 5.5rem;
+  --space-3xl: 8rem;
+
+  /* ---- Layout ---- */
+  --container-max: 1200px;
+  --radius-s: 4px;
+  --radius-m: 10px;
+  --radius-l: 18px;
+  --border-thread: 1px dashed currentColor;
+
+  /* ---- Motion ---- */
+  --ease-tailored: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 180ms;
+  --dur-med: 420ms;
+  --dur-slow: 900ms;
+
+  /* ---- Z-index ---- */
+  --z-nav: 100;
+  --z-overlay: 200;
+  --z-toast: 300;
+}
+
+/* ==========================================================================
+   Light theme — "Bone & Ink" (default)
+   ========================================================================== */
+:root,
+[data-theme='light'] {
+  --bg: #ede7da;
+  --bg-raised: #f7f3ea;
+  --bg-sunken: #e2dac9;
+  --text: #1c2029;
+  --text-muted: #4b5163;
+  --text-faint: #7a7f8c;
+  --border: rgba(28, 32, 41, 0.12);
+  --border-strong: rgba(28, 32, 41, 0.28);
+  --accent: var(--burgundy);
+  --accent-bright: var(--burgundy-bright);
+  --on-accent: #f7f3ea;
+  --shadow-color: 28, 32, 41;
+  --nav-bg: rgba(237, 231, 218, 0.82);
+  --scrim: rgba(13, 19, 33, 0.55);
+}
+
+/* ==========================================================================
+   Dark theme — "Navy & Brass"
+   ========================================================================== */
+[data-theme='dark'] {
+  --bg: #0d1321;
+  --bg-raised: #161d2e;
+  --bg-sunken: #080c16;
+  --text: #ece8df;
+  --text-muted: #a9a6a0;
+  --text-faint: #767a86;
+  --border: rgba(236, 232, 223, 0.12);
+  --border-strong: rgba(236, 232, 223, 0.24);
+  --accent: var(--brass);
+  --accent-bright: var(--brass-bright);
+  --on-accent: #14181f;
+  --shadow-color: 0, 0, 0;
+  --nav-bg: rgba(13, 19, 33, 0.78);
+  --scrim: rgba(0, 0, 0, 0.6);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0ms;
+    --dur-med: 0ms;
+    --dur-slow: 0ms;
+  }
+}

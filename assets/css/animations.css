@@ -1,0 +1,80 @@
+/* ==========================================================================
+   SR Fashion — Animations
+   ========================================================================== */
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.stagger > * {
+  animation: rise var(--dur-slow) var(--ease-tailored) backwards;
+}
+
+.stagger > *:nth-child(1) { animation-delay: 0ms; }
+.stagger > *:nth-child(2) { animation-delay: 90ms; }
+.stagger > *:nth-child(3) { animation-delay: 180ms; }
+.stagger > *:nth-child(4) { animation-delay: 270ms; }
+.stagger > *:nth-child(5) { animation-delay: 360ms; }
+.stagger > *:nth-child(6) { animation-delay: 450ms; }
+
+/* Page load veil — brief curtain-drop reveal, tailored-shop feel */
+.page-veil {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 700ms var(--ease-tailored), opacity 500ms ease 200ms;
+}
+
+.page-veil::after {
+  content: '';
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1.5px dashed var(--accent);
+  animation: spin 1.4s linear infinite;
+}
+
+.page-veil.is-hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-veil { display: none; }
+  .stagger > * { animation: none; }
+}
+
+/* Skeleton shimmer for async content (catalog loading state) */
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-sunken);
+}
+
+.skeleton::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, rgba(184, 146, 63, 0.16), transparent);
+  animation: shimmer 1.6s infinite;
+}
+
+@keyframes shimmer {
+  to { transform: translateX(100%); }
+}
